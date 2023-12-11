@@ -1,0 +1,125 @@
+{
+  "verticalKey": "locations", // The vertical key from your search configuration
+  "pageTitle": "Community Search", // !!!REPLACE THIS VALUE!!! The contents of the title tag and meta open graph tag for title
+  // "metaDescription": "", // The meta tag for open graph description
+  // "canonicalUrl": "", // The link tag for canonical URL as well as the meta tag for open graph url
+  // "keywords": "", // The meta tag for keywords
+  "pageSettings": {
+    "search": {
+      "verticalKey": "locations", // The vertical key from your search configuration
+      "defaultInitialSearch": "" // Enter a default search term
+    }
+  },
+  "componentSettings": {
+
+  "FilterBox": {
+  "filters": [
+    {
+      "type": "FilterOptions",
+      "label": "Distance",
+      "control": "singleoption",
+      "optionType": "RADIUS_FILTER",
+      "options": [{
+          "label": "5 miles", 
+          "value": 8046.72 // value is in meters
+      },
+      {
+          "label": "10 miles",
+           "value": 16093.4  
+      },
+      {
+            "label": "25 miles",
+            "value": 40233.6  
+      },
+      { 
+            "label": "50 miles",
+            "value": 80467.2  
+      },
+      { 
+            "label": "200 miles",
+            "value": 321869
+      }]
+    },
+  ],
+  "searchOnChange": true,
+  "expand": false
+ },
+    /**
+    "QASubmission": {
+      "entityId": "", // Set the ID of the entity to use for Q&A submissions, must be of entity type "Organization"
+      "privacyPolicyUrl": "" // The fully qualified URL to the privacy policy
+    },
+    **/
+    
+    "Facets": {
+      "expand": false, // Allow the user to expand and collapse the facets
+      "showMore": true, // Display a link to see more facet options within a facet
+      "showMoreLimit": 5,
+      "searchOnChange": true, // Will automatically run a search as facets are selected or unselected. Set to false to only trigger updates with an Apply button. 
+      // Additional options are available in the documentation
+      "fields": {
+        "address.region": {
+          "label": "State",
+          "optionsOrder": "ASC"
+        }
+      }
+    },
+    
+    "FilterLink": {
+      "changeFiltersText": "filter results", // Text that displays by default
+      "resetFiltersText": "reset filters", // Text when filters are applied
+      "clearSearchText": "clear search" // Text when there are no results, conducts an empty search
+    },
+    "AppliedFilters": {
+      "removable": true
+    },
+    "VerticalResults": {
+      "noResults": {
+        "displayAllResults": false // Optional, whether to display all results in the vertical when no results are found.
+      },
+      "hideResultsHeader": true
+    },
+    "SearchBar": {
+      "placeholderText": "Search for Communities", // The placeholder text in the answers search bar
+      "allowEmptySearch": true, // Allows users to submit an empty search in the searchbar
+      "loadingIndicator": {
+        "display": true //Optional, whether to include a loading indicator on seachbar
+        // "iconUrl": "" //Optional, use custom icon url instead of the default loading indicator animation
+      },
+      "voiceSearch": {
+        "enabled": false // Whether or not voice search is enabled
+        // "customMicIconUrl": "", // Path to override the voice start icon
+        // "customListeningIconUrl": "" // Path to override the voice stop icon
+      }
+    },
+    "Pagination": {
+      "noResults": {
+        "visible": false
+      }
+    }
+  },
+  // Configuration used to define the look and feel of the vertical, both on this page and, by default,
+  // on the universal page.
+  "verticalsToConfig": {
+    "locations": { // The vertical key from your search configuration
+      "label": "Communities", // The name of the vertical in the section header and the navigation bar
+      "verticalLimit": 5, // The result count limit for vertical search
+      "universalLimit": 5, // The result count limit for universal search
+      "cardType": "communities_override", // The name of the card to use - e.g. accordion, location, customcard 
+      // "icon": "pin", // The icon to use on the card for this vertical
+       "mapConfig": {
+        "mapProvider": "MapBox", // The name of the provider (e.g. Mapbox, Google)
+        "pin": {
+          "backgroundColor": "#1b75a1", // Enter a hex value or color for the pin background
+          "labelColor": "#fff", // Enter a hex value or color for the label color
+          "strokeColor": "#00334C" // Enter a hex value or color for the stroke color
+        },
+        "noResults": {
+          "displayAllResults": true, // Set to FALSE to hide results on the map when a search returns no results
+          "visible": true // Set to FALSE to hide the map when a search returns no results
+        }
+      },
+      "universalSectionTemplate": "standard"
+    }
+  }
+}

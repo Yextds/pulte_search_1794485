@@ -1,0 +1,115 @@
+.Answers
+{
+  .HitchhikerCTA {
+    border-radius: 35px;
+    font-size: 13px;
+    font-weight: var(--yxt-font-weight-light);
+    text-transform: capitalize;
+    color: white;
+    background-color: #1b75a1;
+    border: 1px solid #1b75a1;
+    letter-spacing: 0.4px;
+    padding: 8px 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.15s ease-in-out;
+    min-width: 110px;
+    text-decoration: none;
+    line-height: 1.428571429;
+    &:hover {
+      background-color: #145575;
+      border-color: #0f3f57;
+    }
+  }
+//location styling
+.HitchhikerLocationStandard-tertiaryCTA {
+  display: flex;
+  margin-top: 10px;
+}
+
+//blogs styling
+  .HitchhikerProductProminentImage.blogs_override {
+    .HitchhikerProductProminentImage-img {
+      height: 120px;
+    }
+    .HitchhikerProductProminentImage-primaryCTA {
+      justify-content: center;
+    }
+  }
+//where we build styling
+.HitchhikerStandard.wherewebuildoverride {
+  .HitchhikerStandard-subtitle {
+    color: #343434;
+  }
+}
+
+//products styling
+.HitchhikerProductProminentImage.products_override {
+  .HitchhikerProductProminentImage-img {
+    height: 100%;
+  }
+  .HitchhikerProductProminentImage-primaryCTA,.HitchhikerProductProminentImage-secondaryCTA {
+      justify-content: center;
+    }
+  .Features-body {
+    padding-top: 15px;
+  }
+
+}
+
+//universal
+.HitchhikerResultsStandard-Card--universal{
+  .HitchhikerStandard{
+    padding-left: 10px;
+  }
+}
+
+.HitchhikerResultsGridThreeColumns,.HitchhikerResultsStandard{
+  margin-top: 0px;
+}
+.HitchhikerResultsStandard-title,.HitchhikerResultsGridThreeColumns-title {
+  padding-left: 5px;
+}
+.HitchhikerResultsGridThreeColumns-items{
+  padding: 0px;
+}
+.HitchhikerResultsGridThreeColumns-title,.HitchhikerResultsGridThreeColumns-viewMore,.HitchhikerResultsGridThreeColumns-items,.HitchhikerResultsStandard-title,.HitchhikerResultsStandard-viewMore{
+  border: none;
+}
+.yxt-ResultsHeader--universal.yxt-Results-filters{
+  border: none;
+}
+
+.HitchhikerResultsStandard--where_we_build{
+  .HitchhikerResultsStandard-items,
+  .HitchhikerResultsStandard-Card {
+    border: none;
+  }
+}
+.HitchhikerResultsGridThreeColumns-titleLabel,.HitchhikerResultsStandard-titleLabel{
+  font-size: 45px;
+  font-weight: var(--yxt-font-weight-light);
+}
+//mobile universal
+@media (max-width: 480px) {
+.HitchhikerResultsStandard-title,.HitchhikerResultsGridThreeColumns-title {
+  padding-left: calc(var(--yxt-base-spacing) / 2) var(--yxt-base-spacing);
+  justify-content: center;
+}
+}
+//nav 
+.yxt-Nav-item {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+  // insert Answers scss here e.g.
+  //&-nav {
+  //  padding-top: 32px;
+  //}
+}
+
+.Overlay
+{
+  // Insert Overlay styling here
+}
